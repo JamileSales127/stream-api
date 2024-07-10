@@ -1,0 +1,25 @@
+package org.example.function;
+
+
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * Representa uma função que aceita um argumento do tipo T e retorna um resultado do tipo R. É
+ * utilizada para transformar, ou mapear os elementos do Stream em outros valores, ou tipos.
+ */
+
+public class FunctionExample {
+
+  public static void main(String[] args) {
+    List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
+
+    List<Integer> numerosDobrados = numeros.stream()
+        .map(n -> n
+            * 2) // <- recebe um argumento do tipo T(no caso Interger e retorna um resultado R (Interger))
+        .toList();
+
+    numerosDobrados.forEach(System.out::println);
+  }
+
+}
